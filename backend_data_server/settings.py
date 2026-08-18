@@ -26,7 +26,7 @@ FIREBASE_CREDENTIALS_PATH = credentials.Certificate("secrets/landing-key.json")
 
 # Inicialice la conexión con el Realtime Database con la clave privada y la URL de referencia
 firebase_admin.initialize_app(FIREBASE_CREDENTIALS_PATH, {
-   'databaseURL': 'https://landing-9dc2b-default-rtdb.firebaseio.com/'
+   'databaseURL': "https://landing-3c855-default-rtdb.firebaseio.com"
 })
 
 # Quick-start development settings - unsuitable for production
@@ -134,3 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, STATIC_URL),
+]
